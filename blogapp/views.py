@@ -1,4 +1,4 @@
-from django.http import HttpResponse
+from django.views.generic import TemplateView
 
-def home_view(request):
-    return HttpResponse('Test Home Page')
+class CorePageView(TemplateView):
+    template_name = 'blogapp/core.html'
